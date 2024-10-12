@@ -20,3 +20,22 @@ This pattern helps avoid overwhelming a failing service and improves overall sys
 - **Closed State**: All requests are allowed. The circuit is healthy.
 - **Open State**: No requests are allowed. The circuit is broken due to multiple failures.
 - **Half-Open State**: A few requests are allowed to test if the circuit can recover.
+
+## Health Checks
+https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
+This application includes built-in health checks to monitor the status of various services, ensuring the application is running smoothly. Health checks are vital for production environments as they help identify issues early and maintain application reliability.
+
+### Key Features
+
+- **Custom Health Checks**: Monitor specific endpoints and services, such as the Weather Forecast API.
+- **Azure Cosmos DB Health Check**: Verify the availability and responsiveness of the Azure Cosmos DB instance.
+- **Health Check Endpoint**: Expose a `/healthz` endpoint that returns the status of all health checks in a standardized format.
+
+### Usage
+
+To access the health check information, simply send a request to the `/healthz` endpoint:
+
+<img width="646" alt="image" src="https://github.com/user-attachments/assets/20ce1707-1ff0-4e9a-ab64-b8c42d39425d">
+
+
+
